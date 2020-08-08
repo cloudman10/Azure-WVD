@@ -6,8 +6,6 @@
 # Date                         Version      Changes
 #------------------------------------------------------------------------
 # 09/15/2019                     1.0        Intial Version
-# 09/16/2019                     2.0        Add FSLogix installer
-# 09/16/2019                     2.1        Add FSLogix Reg Keys 
 # 09/16/2019                     2.2        Add Input Parameters 
 # 09/16/2019                     2.3        Add TLS 1.2 settings
 # 09/17/2019                     3.0        Chang download locations to dynamic
@@ -102,24 +100,8 @@ Optimize          = $Optimize
 #################################
 Add-Content -LiteralPath C:\New-WVDSessionHost.log "Downloading WVD Boot Loader"
     Invoke-WebRequest -Uri $WVDBootURI -OutFile "$LocalWVDpath$WVDBootInstaller"
-Add-Content -LiteralPath C:\New-WVDSessionHost.log "Downloading FSLogix"
-    Invoke-WebRequest -Uri $FSLogixURI -OutFile "$LocalWVDpath$FSInstaller"
 Add-Content -LiteralPath C:\New-WVDSessionHost.log "Downloading WVD Agent"
     Invoke-WebRequest -Uri $WVDAgentURI -OutFile "$LocalWVDpath$WVDAgentInstaller"
-
-
-##############################
-#    Prep for WVD Install    #
-##############################
-Add-Content -LiteralPath C:\New-WVDSessionHost.log "Unzip FSLogix"
-Expand-Archive `
-    -LiteralPath "C:\temp\wvd\$FSInstaller" `
-    -DestinationPath "$LocalWVDpath\FSLogix" `
-    -Force `
-    -Verbose
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-cd $LocalWVDpath 
-Add-Content -LiteralPath C:\New-WVDSessionHost.log "UnZip FXLogix Complete"
 
 
 ##############################
