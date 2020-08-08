@@ -39,31 +39,37 @@
       ]
     },
     "VnetRgName": {
-      "type": "string"
+      "type": "string",
+      "defaultValue": "custom-domain-WVD"
     },
     "VnetName": {
-      "type": "string"
+      "type": "string",
+      "defaultValue": "custom-domain-WVD-vnet"
     },
     "SubnetName": {
-      "type": "string"
+      "type": "string",
+      "defaultValue": "WVD"
     },
     "RegistrationToken": {
       "type": "string"
     },
 	"galleryName": {
       "type": "string",
+      "defaultValue": "masterimagerepl",
       "metadata": {
         "description": "Name of the Shared Image Gallery."
       }
     },
     "galleryImageDefinitionName": {
       "type": "string",
+      "defaultValue": "Win10-Ent-MS",
       "metadata": {
         "description": "Name of the Image Definition."
       }
     },
     "galleryImageVersionName": {
       "type": "string",
+      "defaultValue": "0.24364.44398",
       "metadata": {
         "description": "Name of the Image Version - should follow <MajorVersion>.<MinorVersion>.<Patch>."
       }
