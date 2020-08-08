@@ -47,11 +47,26 @@
     "SubnetName": {
       "type": "string"
     },
-    "ProfilePath": {
-      "type": "string"
-    },
     "RegistrationToken": {
       "type": "string"
+    },
+	"galleryName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the Shared Image Gallery."
+      }
+    },
+    "galleryImageDefinitionName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the Image Definition."
+      }
+    },
+    "galleryImageVersionName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the Image Version - should follow <MajorVersion>.<MinorVersion>.<Patch>."
+      }
     },
     "Optimize": {
       "type": "bool",
@@ -166,10 +181,7 @@
             }
           },
           "imageReference": {
-            "publisher": "[variables('VM_IMAGES')[parameters('OperatingSystem')].publisher]",
-            "offer": "[variables('VM_Images')[parameters('OperatingSystem')].offer]",
-            "sku": "[variables('VM_Images')[parameters('OperatingSystem')].sku]",
-            "version": "[variables('VM_Images')[parameters('OperatingSystem')].version]"
+            "id": "[resourceId('Microsoft.Compute/galleries/images/versions', parameters('galleryName'), parameters('galleryImageDefinitionName'), parameters('galleryImageVersionName'))]"
           }
         },
         "networkProfile": {
