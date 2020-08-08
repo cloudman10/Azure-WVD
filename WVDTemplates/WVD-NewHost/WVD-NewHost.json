@@ -121,7 +121,7 @@
     "firstFileNameString": "[variables('UriFileNamePieces')[sub(length(variables('UriFileNamePieces')), 1)]]",
     "firstFileNameBreakString": "[split(variables('firstFileNameString'), '?')]",
     "firstFileName": "[variables('firstFileNameBreakString')[0]]",
-    "Arguments": "[string(concat('-ProfilePath ', parameters('ProfilePath'), ' -RegistrationToken ', parameters('RegistrationToken'), ' -Optimize ', parameters('Optimize')))]"
+    "Arguments": "[string(concat(' -RegistrationToken ', parameters('RegistrationToken'), ' -Optimize ', parameters('Optimize')))]"
   },
   "resources": [
     {
