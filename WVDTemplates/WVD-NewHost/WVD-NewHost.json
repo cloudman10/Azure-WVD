@@ -208,9 +208,6 @@
         },
         "licenseType": "[variables('License')[parameters('OperatingSystem')].License]"
       },
-      "zones": [
-        1
-      ],
       "dependsOn": [
         "WVDNic-Copy"
       ]
