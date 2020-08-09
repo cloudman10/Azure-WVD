@@ -13,15 +13,13 @@ This template will
 # Requirements:
 
 **Permissions:**
-- Azure Active Directory Global Administrator
 - Active Directory Administrator
 - Account to join AD Domain (optional)
 
 **Infrastructure:**
-- Create WVD Tenant
+- Create WVD Workspace
 - Create WVD HostPool
 - Create Active Directory domain for the new VM(s) to join
-- Create a central file share for WVD Profiles
 - Generate HostPool Regestration Token
 
 ----
@@ -29,9 +27,7 @@ This template will
 
 **New Session Host**
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FDeanCefola%2FAzure-WVD%2Fmaster%2FWVDTemplates%2FWVD-NewHost%2FWVD-NewHost.json" target="_blank">
-    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
-</a>
-<a href="http://armviz.io/#/?load=https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FDeanCefola%2FAzure-WVD%2Fmaster%2FWVDTemplates%2FWVD-NewHost%2FWVD-NewHost.json" target="_blank">
-    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.png"/>
+
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Fssabih%2FAzure-WVD%2Fblob%2Fmaster%2FWVDTemplates%2FWVD-NewHost%2FWVD-NewHost.json" target="_blank">
+  <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
