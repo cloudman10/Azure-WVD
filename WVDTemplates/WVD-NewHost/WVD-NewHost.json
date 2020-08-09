@@ -25,7 +25,6 @@
       "type": "string",
       "defaultValue": "Client",
       "allowedValues": [
-        "Server",
         "Client"
       ]
     },
