@@ -20,7 +20,7 @@ This template will
 - Create WVD Workspace
 - Create WVD HostPool
 - Create Active Directory domain for the new VM(s) to join
-- Generate HostPool Regestration Token
+- Generate HostPool Registration Token
 
 ----
 ----
